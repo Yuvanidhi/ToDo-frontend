@@ -13,7 +13,7 @@ const TaskList = () => {
 
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/tasks');
+            const response = await axios.get('https://to-do-backend-yuvanidhi-ss-projects.vercel.app/tasks');
             setTasks(response.data);
         } catch (error) {
             console.error('Error fetching tasks', error);
@@ -22,7 +22,7 @@ const TaskList = () => {
 
     const addTask = async (text) => {
         try {
-            await axios.post('http://localhost:5000/tasks', { text });
+            await axios.post('https://to-do-backend-yuvanidhi-ss-projects.vercel.app/tasks', { text });
             fetchTasks(); // Refresh task list after adding
         } catch (error) {
             console.error('Error adding task', error);
@@ -31,7 +31,7 @@ const TaskList = () => {
 
     const deleteTask = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/tasks/${id}`);
+            await axios.delete(`https://to-do-backend-yuvanidhi-ss-projects.vercel.app/tasks/${id}`);
             fetchTasks(); // Refresh task list after deletion
         } catch (error) {
             console.error('Error deleting task', error);
@@ -39,13 +39,15 @@ const TaskList = () => {
     };
 
     return (
-        <div>
+        <div className="task-list-container">
             <h1>Task List</h1>
             <TaskForm onAddTask={addTask} />
-            <div>
-                {tasks.map((task) => (
-                    <Task key={task._id} task={task} onDelete={deleteTask} />
-                ))}
+            <div className="task-list-box">
+                <div className="task-list">
+                    {tasks.map((task) => (
+                        <Task key={task._id} task={task} onDelete={deleteTask} />
+                    ))}
+                </div>
             </div>
         </div>
     );

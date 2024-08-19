@@ -1,13 +1,62 @@
+/* TaskList.css */
+
+/* Container for centering the task list */
 .task-list-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center horizontally */
     padding: 20px;
     text-align: center;
 }
 
+/* Styling for the box around the task list */
+.task-list-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the task list itself */
 .task-list {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* Basic styling for task items */
+.task {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure the delete button is right-aligned within the task item */
+.task .task-text {
+    flex: 1; /* Allows the task text to take up available space */
+    text-align: left; /* Align text to the left */
+}
+
+.task button {
+    background-color: #dc3545; /* Bootstrap's danger color for delete button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task button:hover {
+    background-color: #c82333;
+}
+
+.task button:focus {
+    outline: none;
 }

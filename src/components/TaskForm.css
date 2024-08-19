@@ -1,5 +1,13 @@
-/* TaskForm.css */
+/* Container for centering the form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* or any height you want */
+    background-color: #f0f0f0; /* optional, to add some contrast */
+}
 
+/* Existing form styles */
 form {
     display: flex;
     flex-direction: column;
@@ -45,4 +53,3 @@ input:focus {
     border-color: #007bff;
     outline: none;
 }
-
