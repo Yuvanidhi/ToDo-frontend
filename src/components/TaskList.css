@@ -1,20 +1,23 @@
-/* TaskList.css */
-
 /* Container for centering the task list */
 .task-list-container {
     max-width: 600px;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
 
-/* Styling for the box around the task list */
 .task-list-box {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Adjusted margin for better spacing */
+    padding: 20px; /* Adjusted padding for better layout */
+    border: 1px solid #ccc; /* Lighter border for a softer look */
+    border-radius: 12px; /* Slightly larger border radius for a modern look */
+    background-color: #bed9ed; /* Clean white background for the list box */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for a subtle effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.task-list-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Styles for the task list itself */
@@ -22,41 +25,51 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px; /* Increased gap for better spacing between tasks */
 }
 
 /* Basic styling for task items */
 .task {
     display: flex;
-    justify-content: space-between; /* Distribute space between items */
+    justify-content: space-between; /* Space between text and button */
     align-items: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 12px;
+    border: 1px solid #ddd; /* Lighter border for a softer look */
+    border-radius: 8px;
+    background-color: #f4f4f4; /* Light background for individual tasks */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for better separation */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+    background-color: #e0e0e0; /* Slightly darker background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Ensure the delete button is right-aligned within the task item */
 .task .task-text {
-    flex: 1; /* Allows the task text to take up available space */
-    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow text to take available space */
+    color: #333; /* Darker text color for better readability */
+    margin-right: 50px; /* Increased space between text and delete button */
 }
 
+/* Button styling within the task item */
 .task button {
-    background-color: #dc3545; /* Bootstrap's danger color for delete button */
+    background-color: #ff3b30; /* Vibrant red for delete button */
     color: white;
     border: none;
     border-radius: 4px;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem; /* Slightly larger padding for better touch target */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .task button:hover {
-    background-color: #c82333;
+    background-color: #d62d20; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 .task button:focus {
     outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.5); /* Subtle focus ring */
 }

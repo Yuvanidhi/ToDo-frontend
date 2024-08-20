@@ -1,60 +1,38 @@
-/* App.css */
-
 /* General styling for the app */
 .App {
-  text-align: center;
-  font-family: 'Arial', sans-serif; /* Modern font family */
-  background-color: #181818; /* Dark background color */
-  color: #e0e0e0; /* Light text color for contrast */
-}
-
-/* Logo styling */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  border: 4px solid #61dafb; /* Accent color for border */
-  border-radius: 50%; /* Makes the logo circular */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for better visibility */
-}
-
-/* Logo animation */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Modern font family */
+    background-color: #1e1e1e; /* Dark background color for the app */
+    color: #e0e0e0; /* Light text color for contrast */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Added padding for better spacing */
 }
 
 /* Header styling */
 .App-header {
-  background-color: #282c34; /* Darker header background */
-  min-height: 100vh;
+    background-color: #121212; /* Even darker background for the header */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #e0e0e0; /* Light text color for readability */
+    border-bottom: 1px solid #333; /* Subtle border at the bottom */
+}
+.task-item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* Space between task name and delete button */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #e0e0e0; /* Light text color for readability */
-  border-bottom: 1px solid #444; /* Subtle border at the bottom */
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f0f0f0; /* Light background color for task items */
+  color: #333; /* Darker text color for contrast */
 }
 
-/* Link styling */
-.App-link {
-  color: #61dafb; /* Bright link color for visibility */
-  text-decoration: none; /* Removes underline from links */
-  font-weight: bold; /* Makes the link text bold */
-}
-
-.App-link:hover {
-  color: #4fa3d1; /* Slightly darker blue on hover */
-  text-decoration: underline; /* Adds underline on hover */
-}
-
-/* Keyframes for logo spin animation */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Task item on hover */
+.task-item:hover {
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+  color: #000; /* Darker text color on hover */
 }

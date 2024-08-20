@@ -40,16 +40,16 @@ const TaskList = () => {
 
     return (
         <div className="task-list-container">
-            <h1>Task List</h1>
-            <TaskForm onAddTask={addTask} />
-            <div className="task-list-box">
-                <div className="task-list">
-                    {tasks.map((task) => (
-                        <Task key={task._id} task={task} onDelete={deleteTask} />
-                    ))}
-                </div>
+        <h1>Task List</h1>
+        <TaskForm onAddTask={addTask} />
+        <div className="task-list-box">
+            <div className="task-list">
+                {tasks.map((task) => (
+                    <Task key={task._id} task={task} onDelete={deleteTask} />
+                ))}
             </div>
         </div>
+    </div>
     );
 };
 

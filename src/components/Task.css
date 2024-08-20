@@ -1,27 +1,33 @@
-.task-item {
+/* Task item container styling */
+.task-item-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+    justify-content: space-between; /* Aligns text and button to opposite sides */
+    align-items: center; /* Vertically center the items */
+    padding: 3px; /* Reduced padding around the container */
+    border: 1px solid #ddd; /* Border for the container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for the container */
+    margin-bottom: 4px; /* Space below each task */
 }
 
+/* Text styling within the task item */
 .task-text {
-    font-size: 16px;
+    color: #333; /* Dark text color for readability */
+    font-size: 16px; /* Font size for task text */
+    flex: 1; /* Allow text to take up available space */
 }
 
-.task-delete-button {
-    padding: 5px 10px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #dc3545;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+/* Button styling */
+.delete-button {
+    background-color: #ff6b6b; /* Red background for the button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for the button */
+    padding: 5px 8px; /* Reduced padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.task-delete-button:hover {
-    background-color: #c82333;
+.delete-button:hover {
+    background-color: #ff3b3b; /* Darker red on hover */
 }
