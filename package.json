@@ -1,6 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
+  "homepage": "https://Yuvanidhi.github.io/ToDo-frontend",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -41,4 +42,6 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
+  
 }
+
